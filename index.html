@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nova Guia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilos básicos */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F4F4F4;
+    }
+
+    /* Menu responsivo */
+    .menu {
+      background-color: #333;
+      overflow: hidden;
+    }
+    
+    .menu a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .menu .icon {
+      display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .menu a:not(:first-child) {display: none;}
+      .menu a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .menu.responsive {position: relative;}
+      .menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    /* Cards de link */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 300px;
+      height: 200px;
+      background-color: #FFFFFF;
+      margin: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 10px;
+      margin: 0;
+      font-size: 24px;
+      text-align: center;
+      color: #333333;
+    }
+
+    .card a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      color: #333333;
+    }
+
+    /* Cores personalizadas */
+    :root {
+      --cor-primaria: #2196F3;
+      --cor-secundaria: #E91E63;
+    }
+
+    .menu a {
+      background-color: var(--cor-primaria);
+    }
+
+    .menu a:hover {
+      background-color: var(--cor-secundaria);
+    }
+
+    .card {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+	}
+    /* Exemplo de uma cor personalizada adicional */
+	.card:nth-child(2) {
+  	background-color: #F5A623;
+	}
+     </style>
+</head>
+<body>
+  <!-- Menu responsivo -->
+  <div class="menu" id="myMenu">
+    <a href="#home">Home</a>
+    <a href="#about">Sobre</a>
+    <a href="#contact">Contato</a>
+    <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- Cards de link -->
+  <div class="cards-container">
+    <div class="card">
+      <a href="https://www.google.com/">
+        <img src="https://via.placeholder.com/300x150.png?text=Google" alt="Google">
+        <h3>Google</h3>
+      </a>
+    </div>
+<div class="card">
+  <a href="https://www.youtube.com/">
+    <img src="https://via.placeholder.com/300x150.png?text=YouTube" alt="YouTube">
+    <h3>YouTube</h3>
+  </a>
+</div>
+
+<div class="card">
+  <a href="https://www.github.com/">
+    <img src="https://via.placeholder.com/300x150.png?text=GitHub" alt="GitHub">
+    <h3>GitHub</h3>
+  </a>
+</div>
+
+<div class="card">
+  <a href="https://www.wikipedia.org/">
+    <img src="https://via.placeholder.com/300x150.png?text=Wikipedia" alt="Wikipedia">
+    <h3>Wikipedia</h3>
+  </a>
+</div>
+
+<!-- Adicione mais cards aqui -->
+ </div>
+  <script>
+    // Toggle do menu responsivo
+    function menuToggle() {
+      var x = document.getElementById("myMenu");
+      if (x.className === "menu") {
+        x.className += " responsive";
+      } else {
+        x.className = "menu";
+      }
+    }
+  </script>
+</body>
+</html>
